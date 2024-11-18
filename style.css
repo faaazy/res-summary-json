@@ -1,0 +1,228 @@
+:root {
+  --light-red--bg: rgba(255, 87, 87, 0.1);
+  --orange-yellow--bg: rgb(255, 176, 31, 0.1);
+  --green-teal--bg: rgb(0, 189, 145, 0.1);
+  --cobalt-blue--bg: rgb(17, 37, 212, 0.1);
+
+  --light-red: rgb(255, 87, 87);
+  --orange-yellow: rgb(255, 176, 31);
+  --green-teal: rgb(0, 189, 145);
+  --cobalt-blue: rgb(17, 37, 212);
+
+  --white: rgb(255, 255, 255);
+  --pale-blue: rgb(235, 241, 255);
+  --light-lavender: rgb(200, 199, 255);
+  --dark-gray-blue: rgb(48, 59, 90);
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+
+  font-family: Grotesk;
+  font-size: 18px;
+}
+@font-face {
+  font-family: Grotesk;
+  src: url(./assets/fonts/HankenGrotesk-VariableFont_wght.ttf);
+}
+
+.test {
+  width: 100%;
+}
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.test__row {
+  display: flex;
+  flex-direction: column;
+}
+.test__top {
+  padding: 30px;
+  text-align: center;
+
+  background: linear-gradient(180deg, rgba(120, 87, 255, 1) 0%, rgba(46, 43, 233, 1) 100%);
+  border-radius: 0 0 2rem 2rem;
+}
+.test__top-title {
+  font-size: 20px;
+  font-weight: 500;
+  color: var(--light-lavender);
+}
+.test__top-score {
+  display: inline-block;
+  padding: 20px 40px;
+  margin: 20px 0;
+
+  border-radius: 50%;
+  background: linear-gradient(180deg, rgba(78, 33, 202, 1) 0%, rgba(36, 33, 202, 0) 100%);
+}
+.test__top-score__title {
+  font-size: 60px;
+  font-weight: 700;
+  color: var(--white);
+}
+.test__top-score__subtitle {
+  color: var(--light-lavender);
+}
+.test__top-text {
+  margin: 10px 0;
+}
+.test__top-text__title {
+  font-size: 25px;
+  font-weight: 500;
+  color: var(--white);
+}
+.test__top-text__subtitle {
+  margin-top: 10px;
+  color: var(--light-lavender);
+  font-size: 16px;
+}
+
+.test__summary {
+  margin: 30px;
+}
+.test__summary-title {
+  font-weight: 700;
+  color: var(--dark-gray-blue);
+}
+.test__summary-items {
+  margin-top: 20px;
+}
+.test__summary-item {
+  display: flex;
+  align-items: center;
+  padding: 20px 15px;
+  border-radius: 10px;
+
+  img {
+    margin-right: 10px;
+  }
+
+  &:not(:last-child) {
+    margin-bottom: 20px;
+  }
+}
+
+.test__summary-item--reaction {
+  background-color: var(--light-red--bg);
+  .test__summary-item__title {
+    color: var(--light-red);
+  }
+}
+.test__summary-item--memory {
+  background-color: var(--orange-yellow--bg);
+  .test__summary-item__title {
+    color: var(--orange-yellow);
+  }
+}
+.test__summary-item--verbal {
+  background-color: var(--green-teal--bg);
+  .test__summary-item__title {
+    color: var(--green-teal);
+  }
+}
+.test__summary-item--visual {
+  background-color: var(--cobalt-blue--bg);
+  .test__summary-item__title {
+    color: var(--cobalt-blue);
+  }
+}
+
+.test__summary-item__title {
+  margin-right: auto;
+
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--light-red);
+}
+.test__summary-item__score {
+  color: var(--light-lavender);
+  font-size: 16px;
+  font-weight: 700;
+
+  strong {
+    font-weight: 700;
+    color: var(--dark-gray-blue);
+  }
+}
+.test__summary-btn__wrapper {
+  margin-top: 30px;
+}
+.test__summary-btn {
+  width: 100%;
+  padding: 15px;
+
+  background-color: var(--dark-gray-blue);
+  border-radius: 50px;
+  color: var(--white);
+  font-size: inherit;
+  font-family: inherit;
+  font-weight: 600;
+
+  cursor: pointer;
+  transition: background-color 0.2s ease-in;
+  &:hover {
+    background-color: rgb(67, 80, 116);
+  }
+}
+
+@media (min-width: 768px) {
+  .container {
+    padding: 0 15px;
+  }
+  .test {
+  }
+  .test__row {
+    flex-direction: row;
+    border-radius: 2rem;
+    background-color: #fff;
+    box-shadow: 10px 10px 15px var(--cobalt-blue--bg);
+  }
+  .test__top {
+    width: 100%;
+    padding: 50px;
+    border-radius: 2rem;
+    max-width: 400px;
+  }
+  .test__top-title {
+    font-size: 25px;
+  }
+  .test__top-score {
+    margin: 30px 0;
+    padding: 40px 60px;
+  }
+  .test__top-score__title {
+    font-size: 80px;
+  }
+  .test__top-text__title {
+    font-size: 35px;
+  }
+  .test__top-text__subtitle {
+    margin-top: 20px;
+    font-size: 18px;
+  }
+
+  .test__summary {
+    width: 100%;
+  }
+  .test__summary-title {
+    font-size: 30px;
+  }
+  .test__summary-item__title,
+  .test__summary-item__score,
+  .test__summary-btn {
+    font-size: 20px;
+  }
+  .test__summary-btn__wrapper {
+    margin-top: 40px;
+  }
+}
